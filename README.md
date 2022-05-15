@@ -1,11 +1,3 @@
-<h1>
-  <img src="">
-</h1>
-
-<h3 align="center">
-  <a href="#">Acessar a demonstração</a>
-</h3>
-
 ## 🎫 Sobre
 
 Projeto desenvolvido durante o bootcamp Spread Fullstack Developer da DIO - Digital Innovation One Inc. (Maio/22)
