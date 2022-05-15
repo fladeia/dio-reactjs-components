@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Layout } from "./components/Layout"
+import { Profile } from './components/Profile'
+import { Repositories } from "./components/Repositories"
+import { GlobalStyle } from "./global/resetCSS"
+import { GithubProvider } from './provider/githubProvider'
+ 
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <GithubProvider>
+        <GlobalStyle />
+        <Layout>
+          <Profile />
+          <Repositories />
+        </Layout>
+      </GithubProvider>
+    </main>
+  )
 }
-
-export default App;
