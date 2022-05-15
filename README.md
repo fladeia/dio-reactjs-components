@@ -34,4 +34,4 @@ Projeto desenvolvido durante o bootcamp Spread Fullstack Developer da DIO - Digi
 
 ---
 
-Desenvolvido por [LadeiaDev](ladeia.dev.br)
+Desenvolvido por [LadeiaDev](https://ladeia.dev.br/)
