@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Profile = styled.div`
   text-align: center;
 
   img {
@@ -8,10 +8,10 @@ export const Wrapper = styled.div`
     height: 200px;
     border-radius: 50%;
   }
+`
 
-  .userNumbers {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
+export const ProfileContent = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 `

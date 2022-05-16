@@ -5,11 +5,11 @@ export const Profile = () => {
   const { githubState } = useGithub()
 
   return (
-    <C.Wrapper>
-        <img src={githubState.user.avatar_url} alt="user avater"></img>
+    <C.Profile>
+        <img src={githubState.user.avatar_url} alt="User avatar"></img>
         <h1>{githubState.user.name}</h1>
         <h3>{githubState.user.login}</h3>
-        <div className='userNumbers'>
+        <C.ProfileContent>
           <h4>Followers</h4>
           <span>{githubState.user.followers}</span>
           <h4>Followings</h4>
@@ -18,7 +18,7 @@ export const Profile = () => {
           <span>{githubState.user.public_gists}</span>
           <h4>Repo pública</h4>
           <span>{githubState.user.public_repos}</span>
-        </div>
-    </C.Wrapper>
+        </C.ProfileContent>
+    </C.Profile>
   )
 }

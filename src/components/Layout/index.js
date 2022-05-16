@@ -4,7 +4,7 @@ import { Profile } from '../../components/Profile'
 import { Repositories } from "../../components/Repositories"
 import * as C from './styles'
 
-export const Layout = ({ children }) => {
+export const Layout = () => {
   const { githubState } = useGithub()
 
   return (

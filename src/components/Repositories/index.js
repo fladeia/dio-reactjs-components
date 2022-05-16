@@ -19,14 +19,14 @@ export const Repositories = () => {
           <C.TabStyle>Starred</C.TabStyle>
         </C.TabListStyle>
         <C.TabPanelStyle>
-            {githubState.repositories.map((item) => (
-                <RepositoryItem
-                  key={item.id}
-                  name={item.name}
-                  repoLink={item.fullName}
-                  fullName={item.fullName}
-                />
-              ))}
+          {githubState.repositories.map((item) => (
+              <RepositoryItem
+                key={item.id}
+                name={item.name}
+                repoLink={item.fullName}
+                fullName={item.fullName}
+              />
+            ))}
         </C.TabPanelStyle>
         <C.TabPanelStyle>
           {githubState.starred.map((item) => (
