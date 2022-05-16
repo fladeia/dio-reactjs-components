@@ -1,6 +1,6 @@
+import { useState } from 'react'      
+import { useGithub } from '../../hooks/githugHooks'
 import * as C from './styles'
-import {useGithub} from '../../hooks/githugHooks'
-import { useState } from 'react'
 
 export const Header = () => {
   const [usernameForSearch, setUsernameForSearch] = useState();

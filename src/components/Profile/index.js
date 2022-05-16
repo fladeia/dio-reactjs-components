@@ -6,7 +6,7 @@ export const Profile = () => {
 
   return (
     <C.Wrapper>
-        <img src={githubState.user.avatar} alt="user avater"></img>
+        <img src={githubState.user.avatar_url} alt="user avater"></img>
         <h1>{githubState.user.name}</h1>
         <h3>{githubState.user.login}</h3>
         <div className='userNumbers'>

@@ -1,15 +1,22 @@
 import { useGithub } from '../../hooks/githugHooks'
 import { Header } from '../Header'
+import { Profile } from '../../components/Profile'
+import { Repositories } from "../../components/Repositories"
 import * as C from './styles'
 
 export const Layout = ({ children }) => {
   const { githubState } = useGithub()
 
   return (
-    <C.WrapperLayout>
-      <Header />
-      {/* {children} */}
-      {githubState.loading ? <p>Loading</p> : <>{children}</>}
-    </C.WrapperLayout>
+    <C.Layout>
+      <C.LayoutContent>
+        {githubState.loading ? <p>Loading</p> : 
+        <>
+          <Header />
+          <Profile />
+          <Repositories />
+        </>}
+      </C.LayoutContent>
+    </C.Layout>
   )
 }

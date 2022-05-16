@@ -1,5 +1,5 @@
 import { createContext, useState, useCallback } from 'react'
-import {api} from "../services/api";
+import { api } from '../services/api'
 
 export const GithubContext = createContext({
   loading: false,
@@ -13,18 +13,15 @@ export const GithubProvider = ({ children }) => {
     hasUser: false,
     loading: false,
     user: {
-      id: "github",
-      avatar: "https://avatars.githubusercontent.com/u/9919?v=4",
-      login: undefined,
-      name: 'undefined',
-      html_url: undefined,
-      blog: undefined,
-      company: undefined,
-      location: undefined,
+      login: 'github',
+      id: 9919,
+      avatar_url: 'https://avatars.githubusercontent.com/u/9919?v=4',
+      html_url: 'https://github.com/github',
+      name: 'GitHub',
+      public_repos: 0,
+      public_gists: 0,
       followers: 0,
       following: 0,
-      public_gists: 0,
-      public_repos: 0,
     },
     repositories: [],
     starred: [],
@@ -43,18 +40,15 @@ export const GithubProvider = ({ children }) => {
           ...prevState,
           hasUser: true,
           user: {
-            id: data.id,
-            avatar: data.avatar_url,
             login: data.login,
-            name: data.name,
+            id: data.id,
+            avatar_url: data.avatar_url,
             html_url: data.html_url,
-            blog: data.blog,
-            company: data.company,
-            location: data.location,
+            name: data.name,
+            public_repos: data.public_repos,
+            public_gists: data.public_gists,
             followers: data.followers,
             following: data.following,
-            public_gists: data.public_gists,
-            public_repos: data.public_repos,
           },
         }));
       })
